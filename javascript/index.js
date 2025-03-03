@@ -8,23 +8,33 @@ function updateTime() {
   brantfordTimeElement.innerHTML = brantfordTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
-  //Los Angeles
-  let losAngelesElement = document.querySelector("#los-angeles");
-  let losAngelesDateElement = losAngelesElement.querySelector(".date");
-  let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-  let losAngelesTime = moment().tz("America/Los_Angeles");
-  losAngelesDateElement.innerHTML = losAngelesTime.format("dddd, MMMM Do YYYY");
-  losAngelesTimeElement.innerHTML = losAngelesTime.format(
+  //Atlanta
+  let atlantaElement = document.querySelector("#atlanta");
+  let atlantaDateElement = atlantaElement.querySelector(".date");
+  let atlantaTimeElement = atlantaElement.querySelector(".time");
+  let atlantaTime = moment().tz("America/New_York");
+  atlantaDateElement.innerHTML = atlantaTime.format("dddd, MMMM Do YYYY");
+  atlantaTimeElement.innerHTML = atlantaTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
 
-  //Tokyo
-  let tokyoElement = document.querySelector("#tokyo");
-  let tokyoDateElement = tokyoElement.querySelector(".date");
-  let tokyoTimeElement = tokyoElement.querySelector(".time");
-  let tokyoTime = moment().tz("Asia/Tokyo");
-  tokyoDateElement.innerHTML = tokyoTime.format("dddd, MMMM Do YYYY");
-  tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
+  //Seoul
+  let seoulElement = document.querySelector("#seoul");
+  let seoulDateElement = seoulElement.querySelector(".date");
+  let seoulTimeElement = seoulElement.querySelector(".time");
+  let seoulTime = moment().tz("Asia/seoul");
+  seoulDateElement.innerHTML = seoulTime.format("dddd, MMMM Do YYYY");
+  seoulTimeElement.innerHTML = seoulTime.format("h:mm:ss [<small>]A[</small>]");
+
+  //Caracas
+  let caracasElement = document.querySelector("#caracas");
+  let caracasDateElement = caracasElement.querySelector(".date");
+  let caracasTimeElement = caracasElement.querySelector(".time");
+  let caracasTime = moment().tz("America/Caracas");
+  caracasDateElement.innerHTML = caracasTime.format("dddd, MMMM Do YYYY");
+  caracasTimeElement.innerHTML = caracasTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 //changing city
 function updateCity(event) {
@@ -47,7 +57,8 @@ function updateCity(event) {
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
         </div>
-      </div>`;
+      </div>
+      `;
 }
 
 updateTime();
